@@ -4,16 +4,19 @@ import sys  # para entrar parametros por command line
 def rgb2yuv(R, G, B):
     # conversion RGB a YCbCr
     y = max(0.299 * R + 0.587 * G + 0.114 * B, 0.0)
-    u = max(-0.148 * R - 0.291 * G + 0.439 * B + 128,0.0)
-    v = max(0.439 * R - 0.368 * G - 0.071 * B + 128,0.0)
+    u = max(-0.148 * R - 0.291 * G + 0.439 * B + 128, 0.0)
+    v = max(0.439 * R - 0.368 * G - 0.071 * B + 128, 0.0)
     return int(y), int(u), int(v)
 
 
 def yuv2rgb(Y, U, V):
     # conversion YCbCr a RGB
-    r = max(1.164 * (Y - 16) + 2.018 * (U - 128), 0.0)
+    b = max(1.164 * (Y - 16) + 2.018 * (U - 128), 0.0)
     g = max(1.164 * (Y - 16) - 0.813 * (V - 128) - 0.391 * (U - 128), 0.0)
-    b = max(1.164 * (Y - 16) + 1.596 * (V - 128), 0.0)
+    r = max(1.164 * (Y - 16) + 1.596 * (V - 128), 0.0)
+    r = min(r, 255)
+    g = min(g, 255)
+    b = min(b, 255)
     return int(r), int(g), int(b)
 
 
