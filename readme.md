@@ -1,2 +1,2 @@
 Lab 1 of the Video part of the subject Audio and Video Encoding Systems.\
-Link to the lab report(in spanish): https://drive.google.com/file/d/1dFDb6FFAEjDfHKl-psuaW5QPT8009c-N/view?usp=sharing
+Link to the lab report (in spanish): https://drive.google.com/file/d/1dFDb6FFAEjDfHKl-psuaW5QPT8009c-N/view?usp=sharing
